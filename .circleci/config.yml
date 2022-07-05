@@ -38,7 +38,7 @@ jobs:
     machine: true
     steps:
       - attach_workspace:
-          at: /tmp/workspace
+          at: /tmp/workspace/Dockerfile
       - run: ls -a /tmp/workspace
       - run:
           name: Create Docker image and push to Docker hub
