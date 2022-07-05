@@ -29,8 +29,6 @@ jobs:
       - run: mvn clean install -DskipTests
       - save_cache:
           paths:
-            - dockerfile: './dir/Dockerfile'
-            - path: './dir'
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
       - persist_to_workspace:
