@@ -42,7 +42,7 @@ jobs:
       - run: ls -a /tmp/workspace
       - run:
           name: Create Docker image and push to Docker hub
-          command: aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/h0g0q5q7  && docker build -t ticketingapp . && docker tag ticketingapp:latest public.ecr.aws/h0g0q5q7/ticketingapp:latest && docker push public.ecr.aws/h0g0q5q7/ticketingapp:latest
+          command: aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/h0g0q5q7 && docker build -t ticketingapp . && docker tag ticketingapp:latest public.ecr.aws/h0g0q5q7/ticketingapp:latest && docker push public.ecr.aws/h0g0q5q7/ticketingapp:latest
   deploy-job:
     docker:
       #specify the version you desire here
